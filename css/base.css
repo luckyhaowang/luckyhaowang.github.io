@@ -1,0 +1,64 @@
+/*1. 重置样式  reset css*/
+*{
+    margin: 0;
+    padding: 0;
+    /*所有的标签*/
+}
+*,
+*::before,
+*::after{
+    /*所有的元素*/
+    /*1. 设置所有的元素的宽度计算从边框开始*/
+    /*2. 防止内容溢出 出现横向滚动条*/
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    font-size: 14px;
+    color: #333;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    /*1. 设置点击高亮颜色为完全透明===去除点击高亮效果 */
+    -webkit-tap-highlight-color: transparent;
+    color: #333;
+}
+input,textarea{
+    border: none;
+    outline: none;
+    resize: none;
+    /*移动端有默认的组件外观  去除默认的外观*/
+    -webkit-appearance: none;
+}
+
+/*2. 公用样式  common css*/
+
+.f_left{
+    float: left;
+}
+.f_right{
+    float: right;
+}
+.clearfix::before,
+.clearfix::after{
+    content: "";
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+    clear: both;
+}
+.ml10{
+    margin-left: 10px;
+}
+.mr10{
+    margin-right: 10px;
+}
+
+/*让 icon_ 开头的class属性  都拥有这些css属性*/
+[class^="icon_"]{
+    background: url("../images/sprites.png") no-repeat 0 0 / 200px 200px;
+}
